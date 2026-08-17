@@ -606,6 +606,20 @@ end
 
 Library:SetDPIScale(85)
 
+-- UI WINDOW INITIALIZATION (FIXED)
+local Window = Library:CreateWindow({
+    Title = 'Slap Battles Script',
+    Center = true,
+    AutoShow = true,
+    TabPadding = 8,
+    MenuFadeTime = 0.2
+})
+
+local MainTab = Window:AddTab('Main')
+local MainGroup = MainTab:AddLeftGroupbox('Combat & Features')
+
+MainGroup:AddLabel('Script Initialized!')
+
 gloveHits = {
     ["All"] = game.ReplicatedStorage:FindFirstChild("GeneralHit"),
     ["Default"] = game.ReplicatedStorage:FindFirstChild("b"),
